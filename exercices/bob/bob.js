@@ -4,5 +4,18 @@
 //
 
 export const hey = (message) => {
-  throw new Error('Remove this line and implement the function');
+  if (message.trim().endWith("?")){
+    if (!/[a-z]/.test(message) && /[A-Z]/.test(message)){
+      return("Calm down, I know what I'm doing!")
+    }
+    return("Sure.")
+  }
+  if (/[a-zA-Z\d]/.test(message))
+  { 
+    //Check if the message is fully uppercase
+    if (!/[a-z]/.test(message) && /[A-Z]/.test(message))
+    {
+      return "Whoa, chill out!";
+    }
+  }
 };
