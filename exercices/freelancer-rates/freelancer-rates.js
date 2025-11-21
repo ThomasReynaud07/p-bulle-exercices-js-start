@@ -49,14 +49,6 @@ export function daysInBudget(budget, ratePerHour) {
  * @returns {number} the rounded up discounted rate
  */
 export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
-  let m = Math.floor(numDays/22)
-  let r = numDays - (m * 22)
-  let m_p = (m * 22 * 8 * ratePerHour)
-  let m_p_f
-  if (discount > 0.0){
-    m_p_f = m_p * (m * discount)
-  }
-
-  let r_p = r * 8 * ratePerHour
-  return r_p + m_p_f
+    let months = numDays % 22
+  return Math.ceil((ratePerHour * 8 * (numDays % 22) + (ratePerHour * 8 * (numDays - months)) - (ratePerHour * 8 * (numDays - months)) * discount))
 }
