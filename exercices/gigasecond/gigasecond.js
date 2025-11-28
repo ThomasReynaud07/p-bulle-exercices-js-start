@@ -4,5 +4,9 @@
 //
 
 export const gigasecond = () => {
-  throw new Error('Remove this line and implement the function');
+  let secondes = 1000000000;
+  let date = new Date(
+    gigasecond.setSeconds(gigasecond.getSeconds() + secondes)
+  );
+  return date;
 };
