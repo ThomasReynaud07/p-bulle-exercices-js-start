@@ -4,18 +4,28 @@
 //
 
 export const hey = (message) => {
-  if (message.trim().endWith("?")){
-    if (!/[a-z]/.test(message) && /[A-Z]/.test(message)){
-      return("Calm down, I know what I'm doing!")
+
+  if (message.trim().endsWith("?")) {
+    if (!/[a-z]/.test(message) && /[A-Z]/.test(message)) {
+      return "Calm down, I know what I'm doing!"
     }
-    return("Sure.")
-  }
-  if (/[a-zA-Z\d]/.test(message))
-  { 
-    //Check if the message is fully uppercase
-    if (!/[a-z]/.test(message) && /[A-Z]/.test(message))
-    {
-      return "Whoa, chill out!";
+    else{
+      return "Sure."
     }
+    
   }
+
+  if (/[a-zA-Z\d]/.test(message)) {
+    if (!/[a-z]/.test(message) && /[A-Z]/.test(message)) {
+      return "Whoa, chill out!"
+   }
+   else{
+    return "Whatever."
+   }       
+  }
+  else{
+    return "Fine. Be that way!"
+  }
+  
 };
+
