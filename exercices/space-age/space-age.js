@@ -13,23 +13,32 @@ export const age = (planet, age) => {
   const saturne = 29.447498;
   const uranus = 84.016846;
   const neptune = 164.79132;
-  if (planet == "earth") {
-    return Number((age / earth / earthTime).toFixed(2));
-  } else if (planet == "mercury") {
-    return Number((age / earth / mercury).toFixed(2));
-  } else if (planet == "venus") {
-    return Number((age / earth / venus).toFixed(2));
-  } else if (planet == "mars") {
-    return Number((age / earth / mars).toFixed(2));
-  } else if (planet == "jupiter") {
-    return Number((age / earth / jupiter).toFixed(2));
-  } else if (planet == "saturn") {
-    return Number((age / earth / saturne).toFixed(2));
-  } else if (planet == "uranus") {
-    return Number((age / earth / uranus).toFixed(2));
-  } else if (planet == "neptune") {
-    return Number((age / earth / neptune).toFixed(2));
-  } else {
-    throw new Error("not a planet");
+  switch (planet) {
+    case "earth":
+      return Number((age / earth / earthTime).toFixed(2));
+
+    case "mercury":
+      return Number((age / earth / mercury).toFixed(2));
+
+    case "venus":
+      return Number((age / earth / venus).toFixed(2));
+
+    case "mars":
+      return Number((age / earth / mars).toFixed(2));
+
+    case "jupiter":
+      return Number((age / earth / jupiter).toFixed(2));
+
+    case "saturn":
+      return Number((age / earth / saturne).toFixed(2));
+
+    case "uranus":
+      return Number((age / earth / uranus).toFixed(2));
+
+    case "neptune":
+      return Number((age / earth / neptune).toFixed(2));
+
+    default:
+      throw new Error("not a planet");
   }
 };
