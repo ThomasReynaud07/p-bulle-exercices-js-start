@@ -14,19 +14,21 @@
  */
 
 export function buildSign(occasion, name) {
-  throw new Error('Remove this line and implement the function');
+  return `Happy ${occasion} ${name}!`;
 }
 
 /**
  * Build a birthday sign that conditionally formats the return string.
  *
  * @param {number} age
- *
+
  * @returns {string} template string based on age
  */
 
 export function buildBirthdaySign(age) {
-  throw new Error('Remove this line and implement the function');
+  return `Happy Birthday! What a ${
+    age < 50 ? "young" : "mature"
+  } fellow you are.`;
 }
 
 /**
@@ -39,7 +41,7 @@ export function buildBirthdaySign(age) {
  */
 
 export function graduationFor(name, year) {
-  throw new Error('Remove this line and implement the function');
+  return `Congratulations ${name}!\nClass of ${year}`;
 }
 
 /**
@@ -53,5 +55,5 @@ export function graduationFor(name, year) {
  */
 
 export function costOf(sign, currency) {
-  throw new Error('Remove this line and implement the function');
+  return `Your sign costs ${(20 + sign.length * 2).toFixed(2)} ${currency}.`;
 }
